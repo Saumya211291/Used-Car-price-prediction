@@ -1,0 +1,105 @@
+{% extends 'block.html' %}
+
+{% block subcontent %}
+<div class="card-body text-center">
+	<h4 class="card-title">Predict the Score</h4>
+	<form method="post" class="form-row" action="/predict">
+		<div class="row">
+			<div class="col-lg-6 col-sm-12">
+				<label for="overs">Car Brand
+					<select name="brand" class="btn btn-light btn-toolbar">
+						<option value="0">Tata Motors</option>
+						<option value="1">Kia</option>
+						<option value="2">Honda</option>
+						<option value="3">Mahindra</option>
+						<option value="4">Audi</option>
+						<option value="5">Renault</option>
+						<option value="6">Ford</option>
+						<option value="7">MG</option>
+						
+					</select>
+				</label>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<label for="runs">Present Price (In Lakhs)
+					<input class="btn btn-light btn-toolbar" name="present_price" min="1",type="float">
+				</label>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<label for="runs">KM Driven
+					<input required type="number" class="btn btn-light btn-toolbar" name="kms_driven" >
+				</label>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<label for="overs">Owners
+					<select name="owners" class="btn btn-light btn-toolbar">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+				</label>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<label for="runs_last_5">Seller Type
+					<select name="seller_type" class="btn btn-light btn-toolbar">
+						<option value="0">Dealer</option>
+						<option value="1">Individual</option>
+					</select>
+				</label>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<label for="wickets_last_5">Fuel Type
+					<select name="fuel_type" class="btn btn-light btn-toolbar">
+						<option value="Petrol">Petrol</option>
+						<option value="Diesel">Diesel</option>
+						<option value="CNG">CNG</option>
+					</select>
+				</label>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<label for="wickets_last_5">Year of Purchase
+					<select name="year_of_purchase" class="btn btn-light btn-toolbar">
+						<option value="2000">2000</option>
+						<option value="2001">2001</option>
+						<option value="2002">2002</option>
+						<option value="2003">2003</option>
+						<option value="2004">2004</option>
+						<option value="2005">2005</option>						
+						<option value="2006">2006</option>
+						<option value="2007">2007</option>
+						<option value="2008">2008</option>
+						<option value="2009">2009</option>
+						<option value="2010">2010</option>
+						<option value="2011">2011</option>
+						<option value="2012">2012</option>
+						<option value="2013">2013</option>
+						<option value="2014">2014</option>
+						<option value="2015">2015</option>
+						<option value="2018">2016</option>
+						<option value="2017">2017</option>
+						<option value="2018">2018</option>
+						<option value="2019">2019</option>
+						<option value="2020">2020</option>
+						<option value="2021">2021</option>
+						<option value="2022">2022</option>
+					</select>
+				</label>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<label for="wickets_last_5">Tranmission Type
+					<select name="tranmission_type" class="btn btn-light btn-toolbar">
+						<option value="0">Automatic</option>
+						<option value="1">Manual</option>
+					</select>
+				</label>
+			</div>
+
+			<div class="col-12">
+				<input required type="submit" class="btn btn-success" value="Predict Price">
+			</div>
+		</div>
+	</form>
+</div>
+
+{% endblock %}

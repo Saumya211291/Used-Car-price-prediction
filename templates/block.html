@@ -1,0 +1,93 @@
+{% block cdn %}
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<!-- AJAX -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Lobster&family=Oxygen&display=swap" rel="stylesheet"> {% endblock %} {% block title %}
+<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='logo.ico')}}">
+<!-- <link rel="background-image" type="background-image" href="{{url_for('static', filename='logo.ico')}}"> -->
+
+<head>
+    <title>Car Price Prediction</title>
+</head>
+<style type="text/css">
+    
+    
+    .ml {
+        font-family: 'Lobster', cursive;
+        text-shadow: 0 5px 15px rgb(250, 248, 248);
+    }
+    
+    .card {
+        background: rgba(10, 10, 10, 0.6);
+        margin-top: 20px!important;
+        font-family: 'Oxygen', sans-serif;
+        border-radius: 15px;
+        box-shadow: 0 7px 25px black;
+        color: white;
+    }
+    
+    .footer {
+        background: rgba(10, 10, 10, 0.9);
+    }
+    
+    .modal-content {
+        color: black;
+        border-radius: 20px;
+    }
+    
+    .footer {
+        position: relative;
+        margin-top: 20px!important;
+        margin-bottom: 20px!important;
+    }
+    
+
+    
+    .links a {
+        color: white!important
+    }
+    
+    .link-button {
+        padding: 25px;
+        border-radius: 50%;
+        font-size: 40px;
+    }
+    
+    .badge {
+        color: white;
+    }
+    
+    input,
+    select {
+        width: 200px;
+        color: black;
+    }
+
+    body{
+    background-image: url("{{ url_for('static', filename='bg.jpg') }}");
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+</style>
+{% endblock %} {% block content %}
+<body>
+<div class="header text-center">
+    <h1 style="color: white;">Car Price Prediction using Machine Learning</h1>
+</div>
+<div class="card w-75 m-auto">
+    {% block subcontent %} {% endblock %}
+</div>
+</body>
+{% block footer %}
+{% endblock %} {% endblock %}
